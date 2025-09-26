@@ -1,0 +1,161 @@
+/* Estilos base adaptados do exemplo */
+:root {
+    --primary-color: #00a8ff;
+    --secondary-color: #4cd137;
+    --accent-color: #ff8800; /* Laranja da logo - para títulos */
+    --text-secondary: #e8f4f8; /* Branco azulado - para texto secundário */
+    --dark-color: #000;
+    --dark-gray: #111;
+    --medium-gray: #333;
+    --light-gray: #e8f4f8; /* Atualizado para branco azulado */
+    --very-light-gray: #f4f4f4;
+    --white: #fff;
+    --gradient-dark: linear-gradient(135deg, #000 0%, #222 100%);
+    --gradient-primary: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+
+    /* Glassmorphism Variables */
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-bg-dark: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-border-dark: rgba(0, 0, 0, 0.4);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --glass-blur: 25px;
+    --glass-radius: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--white);
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+/* Glassmorphism Base Classes */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+    box-shadow: var(--glass-shadow);
+}
+
+.glass-dark {
+    background: var(--glass-bg-dark);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border-dark);
+    border-radius: var(--glass-radius);
+    box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para títulos (exceto Hero) */
+h1:not(.hero-content h1),
+h2:not(.hero-content h1),
+h3:not(.hero-content h1) {
+    color: var(--accent-color); /* Laranja da logo */
+}
+
+/* Estilos para texto secundário */
+p,
+.description,
+.features li,
+.plan-features li,
+.segment-features li,
+.starlink-features li {
+    color: var(--text-secondary); /* Branco azulado */
+}
+
+/* Estilos para texto em cards */
+.card p,
+.plan-card p,
+.result-card p,
+.segment-card p {
+    color: var(--text-secondary);
+}
+
+/* Estilos para labels e textos menores */
+.label,
+.period,
+.result-label,
+.plan-toggle span {
+    color: var(--text-secondary);
+}

@@ -1,0 +1,54 @@
+.mp-section {
+    padding: 60px 0 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 168, 255, 0.08) 0%, rgba(0, 168, 255, 0.04) 30%, rgba(0, 168, 255, 0.02) 60%, transparent 100%),
+                radial-gradient(circle at 80% 20%, rgba(255, 136, 0, 0.06) 0%, rgba(255, 136, 0, 0.03) 40%, rgba(255, 136, 0, 0.01) 70%, transparent 100%);
+}
+
+.mp-section .container {
+    width: 100%;
+    max-width: 1400px !important;
+    margin: 0 auto;
+    padding: 0 80px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.mp-header { text-align: center; margin-bottom: 80px; }
+.mp-header h2 { font-size: 3rem; line-height: 1.2; color: var(--accent-color); margin: 0; }
+
+.mp-content { display: flex; align-items: center; justify-content: center; gap: 80px; width: 100%; max-width: 1200px; }
+.mp-image { flex: 1; display: flex; justify-content: center; align-items: center; position: relative; }
+.mp-image img { max-width: 100%; height: auto; border-radius: 20px; box-shadow: var(--shadow); }
+.mp-text { flex: 1; max-width: 700px; }
+
+.objection-breakers { display: flex; flex-direction: column; gap: 25px; }
+.objection-item { padding: 25px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border-left: 4px solid #00a8ff; transition: all 0.3s ease; }
+.objection-item:hover { background: rgba(255, 255, 255, 0.08); transform: translateX(-10px); }
+.objection-item h3 { font-size: 1.3rem; color: #fff; margin-bottom: 12px; font-weight: 600; }
+.objection-item p { color: var(--light-gray); line-height: 1.6; margin: 0; font-size: 1.05rem; }
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .mp-header h2 { font-size: 2.8rem; }
+}
+
+@media (max-width: 992px) {
+  .mp-section .container { padding: 0 40px !important; }
+  .mp-content { flex-direction: column; gap: 40px; text-align: center; }
+  .objection-item:hover { transform: none; }
+}
+
+@media (max-width: 768px) {
+  .mp-section { padding: 40px 0 60px; }
+  .mp-section .container { padding: 0 30px !important; }
+  .mp-content { gap: 30px; }
+  .mp-header h2 { font-size: 2.2rem; }
+}
+
+

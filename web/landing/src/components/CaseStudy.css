@@ -1,0 +1,95 @@
+.case-study {
+    /* Removido background escuro para deixar o fundo galáctico visível */
+}
+
+.case-study-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.case-study-text {
+    flex: 1;
+}
+
+.case-study-text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.case-highlight {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.case-study-text p {
+    color: var(--light-gray);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.case-results {
+    margin: 30px 0;
+}
+
+.case-results li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.case-results i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.case-results span {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.case-author {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.author-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.author-info p {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.case-study-image {
+    flex: 1;
+}
+
+.case-study-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .case-study-content {
+        flex-direction: column-reverse;
+    }
+
+    .case-study-image {
+        margin-bottom: 30px;
+    }
+}

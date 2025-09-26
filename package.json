@@ -1,0 +1,51 @@
+{
+  "name": "landing-page-mikrotik",
+  "version": "1.0.0",
+  "description": "Landing Page para Mikrotik Lucrativo - Projeto separado",
+  "main": "web/landing/src/index.jsx",
+  "scripts": {
+    "start": "python3 scripts/deploy.py",
+    "start:simple": "python3 -m http.server 3001",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development",
+    "deploy": "npm run build && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing-page",
+    "mikrotik",
+    "hotspot",
+    "react"
+  ],
+  "author": "Mikrotik Lucrativo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.0",
+    "@mui/material": "^5.14.0",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.9",
+    "react-icons": "^5.5.0",
+    "react-select": "^5.10.2",
+    "sweetalert2": "^11.22.2"
+  }
+}

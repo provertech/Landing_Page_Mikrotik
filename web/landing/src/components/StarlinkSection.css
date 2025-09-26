@@ -1,0 +1,314 @@
+.starlink-section {
+    padding: 60px 0 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle at 30% 50%, rgba(255, 136, 0, 0.08) 0%, rgba(255, 136, 0, 0.04) 30%, rgba(255, 136, 0, 0.02) 60%, transparent 100%),
+                radial-gradient(circle at 70% 20%, rgba(76, 209, 55, 0.06) 0%, rgba(76, 209, 55, 0.03) 40%, rgba(76, 209, 55, 0.01) 70%, transparent 100%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.01) 80%, transparent 100%);
+}
+
+/* Sobrescrever container global especificamente para StarlinkSection */
+.starlink-section .container {
+    width: 100%;
+    max-width: 1400px !important;
+    margin: 0 auto;
+    padding: 0 80px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.starlink-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.starlink-header h2 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.starlink-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.starlink-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.starlink-text h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--accent-color);
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes neonRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.starlink-text p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.starlink-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.starlink-features li {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.starlink-features i {
+    color: var(--secondary-color);
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+.starlink-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.starlink-image::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: radial-gradient(circle, rgba(255, 136, 0, 0.15) 0%, rgba(255, 136, 0, 0.08) 40%, rgba(255, 136, 0, 0.03) 70%, transparent 100%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(30px);
+    animation: neonPulse 3s ease-in-out infinite;
+}
+
+.starlink-image::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    right: -60px;
+    bottom: -60px;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 136, 0, 0.3), transparent, rgba(0, 168, 255, 0.3), transparent);
+    border-radius: 50%;
+    z-index: -2;
+    filter: blur(20px);
+    animation: neonRotate 4s linear infinite;
+}
+
+.starlink-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.starlink-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 136, 0, 0.5), 0 0 60px rgba(0, 168, 255, 0.3);
+    filter: brightness(1.1);
+}
+
+.starlink-text {
+    flex: 1;
+    max-width: 700px;
+}
+
+.objection-breakers {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.objection-item {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border-left: 4px solid #00a8ff;
+    transition: all 0.3s ease;
+}
+
+.objection-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(10px);
+}
+
+.objection-item h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.objection-item p {
+    color: var(--light-gray);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* Responsividade otimizada */
+@media (max-width: 1400px) {
+    .starlink-section .container {
+        max-width: 1200px !important;
+        padding: 0 60px !important;
+    }
+
+    .starlink-content {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .starlink-section {
+        padding: 50px 0 80px;
+    }
+
+    .starlink-section .container {
+        max-width: 1000px !important;
+        padding: 0 50px !important;
+    }
+
+    .starlink-content {
+        gap: 50px;
+    }
+
+    .starlink-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .starlink-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .starlink-section .container {
+        padding: 0 40px !important;
+    }
+
+    .starlink-content {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .starlink-text {
+        max-width: 100%;
+    }
+
+    .starlink-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .starlink-features li {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .starlink-section {
+        padding: 40px 0 60px;
+    }
+
+    .starlink-section .container {
+        padding: 0 30px !important;
+    }
+
+    .starlink-content {
+        gap: 30px;
+    }
+
+    .starlink-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .starlink-text p {
+        font-size: 1rem;
+    }
+
+    .starlink-features li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .starlink-section {
+        padding: 30px 0 50px;
+    }
+
+    .starlink-section .container {
+        padding: 0 20px !important;
+    }
+
+    .starlink-content {
+        gap: 25px;
+    }
+
+    .starlink-text h2 {
+        font-size: 2rem;
+    }
+
+    .starlink-text p {
+        font-size: 0.95rem;
+    }
+
+    .starlink-features li {
+        font-size: 0.95rem;
+    }
+}
